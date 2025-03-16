@@ -1,72 +1,134 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Stream Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Live Stream Performance Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background-color: #14A37F;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .metric-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .top-host, .client, .table-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-container th, .table-container td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .metrics {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>Live Stream Performance</h1>
+            <h3>Last 14 Days</h3>
+        </div>
 
-    <h1>Live Stream Performance</h1>
-
-    <div class="dashboard">
-        <div class="stats">
-            <p>Total GMV: <span id="totalGMV">Loading...</span></p>
-            <p>Total Hours: <span id="totalHours">Loading...</span></p>
-            <p>Total Order: <span id="totalOrder">Loading...</span></p>
+        <div class="metrics">
+            <div class="metric-box">
+                <h2>Total GMV</h2>
+                <p>XXXX</p>
+            </div>
+            <div class="metric-box">
+                <h2>Total Hours</h2>
+                <p>XXXX</p>
+            </div>
+            <div class="metric-box">
+                <h2>Total Order</h2>
+                <p>XXXX</p>
+            </div>
         </div>
 
         <div class="top-host">
             <h2>Top Host</h2>
-            <img id="topHostImage" src="" alt="Host Image">
-            <p id="topHost">Loading...</p>
+            <div style="background: purple; height: 200px; width: 200px; margin: auto;"></div>
+            <p>XXXXXXX</p>
+        </div>
+
+        <div class="table-container">
+            <h2>Host Performance</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Host</th>
+                    <th>Total Hours</th>
+                    <th>Total GMV</th>
+                    <th>GMV/h</th>
+                    <th>View/h</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+            </table>
         </div>
 
         <div class="client">
             <h2>Client</h2>
-            <p id="client">Loading...</p>
-        </div>
-
-        <div class="video">
-            <h2>Live Stream Video</h2>
-            <iframe id="videoFrame" width="560" height="315"></iframe>
-        </div>
-
-        <div class="photo-frame">
-            <h2>Photo Frame</h2>
-            <img id="photoFrame" src="" alt="Photo Frame">
+            <p>Total Hours: XXXX | Total GMV: XXXX | Total Order: XXXX</p>
         </div>
     </div>
-
-    <script>
-        const sheetAPI = "PASTE_URL_APPS_SCRIPT_HERE";
-
-        function fetchData() {
-            fetch(sheetAPI)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("totalGMV").textContent = data.totalGMV;
-                    document.getElementById("totalHours").textContent = data.totalHours;
-                    document.getElementById("totalOrder").textContent = data.totalOrder;
-                    document.getElementById("topHost").textContent = data.topHost;
-                    document.getElementById("topHostImage").src = data.topHostImage;
-                    document.getElementById("client").textContent = data.client;
-
-                    // Format Google Drive Video Link
-                    const videoId = data.videoLink.split("id=")[1];
-                    document.getElementById("videoFrame").src = `https://drive.google.com/file/d/${videoId}/preview`;
-
-                    // Update Photo Frame
-                    document.getElementById("photoFrame").src = data.photoFrame;
-                })
-                .catch(error => console.error("Error fetching data:", error));
-        }
-
-        // Fetch data setiap 1 jam (3600000 ms)
-        fetchData();
-        setInterval(fetchData, 3600000);
-    </script>
-
 </body>
 </html>
