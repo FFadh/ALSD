@@ -1,44 +1,85 @@
 body {
     font-family: Poppins, sans-serif;
+    background-color: #22A37D;
+    color: white;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.dashboard-container {
+.dashboard {
+    width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-    border-radius: 10px 10px 0 0;
-}
-
-.stats {
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.card {
-    background: #333;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
+.logo img {
+    height: 50px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.summary-box {
+    flex: 1;
+    background: #1F8A6A;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    width: 30%;
 }
 
-.stream-list {
-    overflow-x: auto;
+.summary-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.summary-box p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+}
+
+.top-host {
+    background: #1F8A6A;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.host-image {
+    width: 100px;
+    height: 100px;
+    background: #A649F4;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.performance-table {
+    background: #1F8A6A;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 table {
@@ -46,29 +87,32 @@ table {
     border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.client-summary {
+    background: #1F8A6A;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
-th {
-    background-color: #333;
-    color: white;
+.client-box p {
+    font-size: 16px;
+    margin: 5px 0;
 }
 
-.status.live {
-    color: green;
+.client-box span {
+    font-size: 18px;
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        width: 80%;
-        margin-bottom: 10px;
-    }
+.extra-info {
+    background: #1F8A6A;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
 }
