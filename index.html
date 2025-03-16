@@ -3,131 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Stream Performance Dashboard</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Poppins, sans-serif;
-        }
-
-        body {
-            background-color: #14A37F;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 20px 0;
-        }
-
-        .metrics {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .metric-box {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-
-        .top-host, .client, .table-container {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .table-container table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .table-container th, .table-container td {
-            border: 1px solid white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .metrics {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <title>Live Stream Performance</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="dashboard">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Aloshop by Shipper">
+            </div>
             <h1>Live Stream Performance</h1>
-            <h3>Last 14 Days</h3>
-        </div>
+            <span>Last 14 Days</span>
+        </header>
 
-        <div class="metrics">
-            <div class="metric-box">
+        <section class="summary">
+            <div class="summary-box">
                 <h2>Total GMV</h2>
                 <p>XXXX</p>
             </div>
-            <div class="metric-box">
+            <div class="summary-box">
                 <h2>Total Hours</h2>
                 <p>XXXX</p>
             </div>
-            <div class="metric-box">
+            <div class="summary-box">
                 <h2>Total Order</h2>
                 <p>XXXX</p>
             </div>
-        </div>
+        </section>
 
-        <div class="top-host">
-            <h2>Top Host</h2>
-            <div style="background: purple; height: 200px; width: 200px; margin: auto;"></div>
-            <p>XXXXXXX</p>
-        </div>
+        <div class="content">
+            <div class="top-host">
+                <h3>Top Host</h3>
+                <div class="host-image"></div>
+                <p>XXXXXXX</p>
+            </div>
 
-        <div class="table-container">
-            <h2>Host Performance</h2>
-            <table>
-                <tr>
-                    <th>Rank</th>
-                    <th>Host</th>
-                    <th>Total Hours</th>
-                    <th>Total GMV</th>
-                    <th>GMV/h</th>
-                    <th>View/h</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Text</td>
-                    <td>Text</td>
-                    <td>Text</td>
-                    <td>Text</td>
-                    <td>Text</td>
-                </tr>
-            </table>
-        </div>
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Host</th>
+                            <th>Total Hours</th>
+                            <th>Total GMV</th>
+                            <th>GMV/h</th>
+                            <th>View/h</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                        <tr><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                        <tr><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                        <tr><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="client">
-            <h2>Client</h2>
-            <p>Total Hours: XXXX | Total GMV: XXXX | Total Order: XXXX</p>
+            <div class="client-summary">
+                <h3>Client</h3>
+                <div class="client-box">
+                    <p>Total Hours <span>XXXX</span></p>
+                    <p>Total GMV <span>XXXX</span></p>
+                    <p>Total Order <span>XXXX</span></p>
+                </div>
+            </div>
+
+            <div class="extra-info"></div>
         </div>
     </div>
 </body>
