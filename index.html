@@ -1,245 +1,115 @@
-<div class="dashboard-alsd">
-  <div class="header">
-    <div class="header-info">
-      <div class="live-stream-performance">Live Stream Performance</div>
-      <div class="duration">
-        <div class="last-14-days">Last 14 Days</div>
-      </div>
-    </div>
-    <div class="logo-flatten">
-      <div class="rectangle-3"></div>
-      <div class="logo-aloshop-white-1">
-        <img class="asset" src="asset0.svg" />
-      </div>
-    </div>
-  </div>
-  <div class="data-dashboard">
-    <div class="data">
-      <div class="frame-8">
-        <div class="summary">
-          <div class="tittle">Total GMV</div>
-          <div class="place-holder-text">XXXX</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #16a085;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1207px;
+            margin: auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+            background: #0f766e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 1196px;
+            margin: auto;
+        }
+        .metric-box {
+            flex: 1;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .top-host, .client {
+            display: flex;
+            margin-top: 20px;
+        }
+        .top-host .box {
+            width: 287px;
+            height: 259px;
+            background: purple;
+            border-radius: 10px;
+        }
+        .table-container {
+            flex-grow: 1;
+            width: 900px;
+            background: #0e6251;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+        .chart-container {
+            width: 593px;
+            height: 400px;
+            background: #0e4d47;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Live Stream Performance</h1>
+            <p>Last 14 Days</p>
         </div>
-        <div class="summary">
-          <div class="tittle">Total Hours</div>
-          <div class="place-holder-text">XXXX</div>
+        <div class="metrics">
+            <div class="metric-box">Total GMV<br>XXXX</div>
+            <div class="metric-box">Total Hours<br>XXXX</div>
+            <div class="metric-box">Total Order<br>XXXX</div>
         </div>
-        <div class="summary">
-          <div class="tittle">Total Order</div>
-          <div class="place-holder-text">XXXX</div>
-        </div>
-      </div>
-      <div class="card-top-host">
-        <div class="tittle2">Top Host</div>
-        <div class="rectangle-8"></div>
-        <div class="host-name">XXXXXXX</div>
-      </div>
-      <div class="detail-host-card">
-        <div class="detail-host-table">
-          <div class="table-1">
-            <div class="rectangle-9"></div>
-            <div class="text">Rank</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-2">
-            <div class="rectangle-9"></div>
-            <div class="text">Host</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-3">
-            <div class="rectangle-9"></div>
-            <div class="text">Total Hours</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-4">
-            <div class="rectangle-9"></div>
-            <div class="text">Total GMV</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-5">
-            <div class="rectangle-9"></div>
-            <div class="text">GMV /h</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-6">
-            <div class="rectangle-9"></div>
-            <div class="text">View /h</div>
-            <div class="line-1"></div>
-          </div>
-          <div class="table-7">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-8">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-9">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-10">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-11">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-12">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-13">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-14">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-15">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-16">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-17">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-18">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-19">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-20">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-21">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-22">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-23">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-24">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-25">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-26">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-27">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-28">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-29">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-30">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-31">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-32">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-33">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-34">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-35">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-          <div class="table-36">
-            <div class="rectangle-9"></div>
-            <div class="text2">Text</div>
-            <div class="line-12"></div>
-          </div>
-        </div>
-      </div>
-      <div class="frame-11">
-        <div class="frame-10">
-          <div class="client">
-            <div class="client2">Client</div>
-          </div>
-          <div class="frame-9">
-            <div class="summary2">
-              <div class="tittle3">Total Hours</div>
-              <div class="place-holder-text2">XXXX</div>
+        <div class="top-host">
+            <div class="box"></div>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Host</th>
+                        <th>Total Hours</th>
+                        <th>Total GMV</th>
+                        <th>GMV/h</th>
+                        <th>View/h</th>
+                    </tr>
+                    <tr><td>1</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                    <tr><td>2</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td><td>Text</td></tr>
+                </table>
             </div>
-            <div class="summary2">
-              <div class="tittle3">Total GMV</div>
-              <div class="place-holder-text2">XXXX</div>
-            </div>
-            <div class="summary2">
-              <div class="tittle3">Total Order</div>
-              <div class="place-holder-text2">XXXX</div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="client">
+            <div class="metric-box">Total Hours<br>XXXX</div>
+            <div class="metric-box">Total GMV<br>XXXX</div>
+            <div class="metric-box">Total Order<br>XXXX</div>
+        </div>
+        <div class="chart-container"></div>
     </div>
-    <div class="i-frame-video"></div>
-  </div>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
